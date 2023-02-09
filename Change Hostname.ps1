@@ -1,1 +1,3 @@
-Rename-Computer -NewName "PDA-TEST-001" -Restart
+$PCName =""
+
+Rename-Computer -NewName $PCName -Restart
