@@ -1,2 +1,2 @@
 $pcname= ConvertFrom-StringData -StringData $args[0]
-Rename-Computer -NewName '$pcname' -Restart
+Rename-Computer -NewName $pcname -Restart
