@@ -1,3 +1,1 @@
-$Sysname = 'PD-Testing-1'
-
-Rename-Computer -NewName '$SysName' -Restart
+powershell -command "$pcname = Read-Host -Prompt 'Input the new PC name'; Rename-Computer -NewName $pcname"
