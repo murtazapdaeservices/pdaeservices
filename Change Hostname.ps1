@@ -1,1 +1,1 @@
-powershell -command "$pcname = Read-Host -Prompt 'Input the new PC name'; Rename-Computer -NewName $pcname"
+Rename-Computer -ComputerName "PDA-TEST-001" -NewName "TestMC" -Restart
