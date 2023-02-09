@@ -1,1 +1,2 @@
-Rename-Computer -ComputerName "PDA-TEST-001" -NewName "TestMC" -Restart
+param ($oldname, $newname)
+Rename-Computer -ComputerName '$oldname' -NewName '$newname' -Restart
