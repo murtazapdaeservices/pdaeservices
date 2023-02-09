@@ -1,3 +1,3 @@
-$Sysname = "PD-Testing-1"
+$Sysname = 'PD-Testing-1'
 
 Rename-Computer -NewName '$SysName' -Restart
