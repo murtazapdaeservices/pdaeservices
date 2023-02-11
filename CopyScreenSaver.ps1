@@ -1,1 +1,1 @@
-Copy-Item "https://github.com/murtazapdaeservices/pdaeservices/raw/Test/PNQ_Wallpaper.jpg" -Destination "C:\Screensaver\"
+Invoke-WebRequest 'https://github.com/murtazapdaeservices/pdaeservices/blob/Test/PNQ_Wallpaper.jpg?raw=true' -OutFile c:\images\Wallpaper.jpg
