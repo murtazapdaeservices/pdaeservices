@@ -1,6 +1,6 @@
 $ErrorActionPreference= 'silentlycontinue'
  
-$SSFile = "${Env:SystemRoot}\PNQScreensaver.scr"
+$SSFile = "c:\Windows\System32\PNQScreensaver.scr"
  
 Remove-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name "ScreenSaveActive"
  
