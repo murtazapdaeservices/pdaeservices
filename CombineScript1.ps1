@@ -7,8 +7,5 @@ Invoke-WebRequest -Uri $url -OutFile $output
 
 Copy-Item -Path C:\PNQScreensaver.scr -Destination c:\Windows\System32\
 
-New-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name SCRNSAVE.EXE -Value $SSFile -PropertyType String
 
-reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v SCRNSAVE.EXE /t REG_SZ /d C:\Windows\system32\PNQScreensaver.scr /f
-
-rundll32.exe user32.dll, UpdatePerUserSystemParameters
+reg add “HKEY_CURRENT_USER\Control Panel\Desktop” /v SCRNSAVE.EXE /t REG_SZ /d C:\Windows\system32\PNQScreensaver.scr /f
