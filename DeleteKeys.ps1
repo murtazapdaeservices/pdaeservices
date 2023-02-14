@@ -1,11 +1,19 @@
 $ErrorActionPreference= 'silentlycontinue'
  
-$SSFile = "${Env:SystemRoot}\PNQScreensaver.scr.scr"
+$SSFile = "${Env:SystemRoot}\PNQScreensaver.scr"
  
-Remove-ItemProperty -Path "HKEY_CURRENT_USER\Control Panel\Desktop" -Name "ScreenSaveActive"
+Remove-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name "ScreenSaveActive"
  
-Remove-ItemProperty -Path "HKEY_CURRENT_USER\Control Panel\Desktop" -Name "ScreenSaverIsSecure"
+Remove-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name "ScreenSaverIsSecure"
  
-Remove-ItemProperty -Path "HKEY_CURRENT_USER\Control Panel\Desktop" -Name "ScreenSaveTimeOut"
+Remove-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name "ScreenSaveTimeOut"
  
-Remove-ItemProperty -Path "HKEY_CURRENT_USER\Control Panel\Desktop" -Name "SCRNSAVE.EXE"
+Remove-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name "SCRNSAVE.EXE"
+ 
+New-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name ScreenSaveActive -Value 1 -PropertyType String
+ 
+New-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name ScreenSaverIsSecure -Value 0 -PropertyType String
+ 
+New-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name ScreenSaveTimeOut -Value 300 -PropertyType String
+ 
+New-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name SCRNSAVE.EXE -Value $SSFile -PropertyType String
