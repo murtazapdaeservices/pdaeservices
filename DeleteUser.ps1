@@ -1,1 +1,1 @@
-Remove-LocalUser -Name "DDS"
+net user DDS /delete
