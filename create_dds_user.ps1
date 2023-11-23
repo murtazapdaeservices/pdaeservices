@@ -1,4 +1,4 @@
-net user /add DDS Aries2025!
+net user /add DDS1 Aries2025!
 
 net localgroup Administrators DDS /add
 
